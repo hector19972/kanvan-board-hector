@@ -19,8 +19,8 @@ import {RouterTestingModule} from '@angular/router/testing';
     FormsModule,
     RouterTestingModule,
     RouterModule.forRoot([
-      { path:'', component: KanbanBoard }
-    ])
+    { path: '', component: KanbanBoard }
+], { relativeLinkResolution: 'legacy' })
   ],
   exports: [
     RouterModule
