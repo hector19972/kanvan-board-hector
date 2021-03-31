@@ -42,18 +42,29 @@ export class KanbanBoard implements OnInit {
   @ViewChild("create-task-input") taskName: ElementRef;
 
   createTask = (nombre) => {
-    console.log("Hola");
     this.tasks.push({ name: nombre, stage: 0 });
     this.configureTasksForRendering();
   }
   taskBack = (task: Task) => {
-    console.log(task.name);
+    //console.log(task.name);
+    this.tasks[this.tasks.indexOf(task)].stage--;
+    this.configureTasksForRendering();
   }
   taskFoward = (task: Task) => {
-    console.log(task.name);
+    //console.log(task.name);
+    this.tasks[this.tasks.indexOf(task)].stage++;
+    this.configureTasksForRendering();
   }
   taskDelete = (task: Task) => {
-    console.log(task.name);
+    //console.log(task);
+    //console.log(this.tasks);
+    /*
+    this.tasks.find((task)=>{
+      console.log("Encontrado");
+    } );*/
+    //console.log(this.tasks.indexOf(task));
+    this.tasks.splice(this.tasks.indexOf(task),1);
+    this.configureTasksForRendering();
   }
 }
 

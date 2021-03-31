@@ -2,7 +2,7 @@
   <section class="mt-50 layout-row align-items-center justify-content-center">
     <input id="create-task-input" #createTaskInput type="text" class="large" placeholder="New task name"
       data-test-id="create-task-input" />
-    <button type="submit" class="ml-30" (click)='createTask(createTaskInput.value)'
+    <button type="submit" class="ml-30" (click)='createTask(createTaskInput.value); createTaskInput.value=""'
       data-test-id="create-task-button">Create task</button>
   </section>
 
