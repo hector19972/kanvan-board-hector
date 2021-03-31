@@ -20,7 +20,8 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['ChromeHeadless'],
+    //le cambie el ChromeHeadless por ChromeCanary, no me dejaba acceder a el test
+    browsers: ['ChromeCanary'],
     singleRun: true,
     restartOnFileChange: true,
     junitReporter: {
